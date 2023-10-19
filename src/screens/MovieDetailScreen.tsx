@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.Black,
+    paddingBottom: SPACING.space_32,
   },
   loading_indicator_container: {
     flex: 1,

@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   },
 
   search_bar_input: {
-    marginHorizontal: SPACING.space_36,
+    marginHorizontal: SPACING.space_18,
     marginTop: SPACING.space_36,
     marginBottom: SPACING.space_18,
   },
