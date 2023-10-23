@@ -145,7 +145,7 @@ const SeatBookingScreen = ({navigation, route}: any) => {
         await EncryptedStorage.setItem(
           'ticket',
           JSON.stringify({
-            seatArray: selected_seat_array,
+            seat_array: selected_seat_array,
             time: time_array[selected_time_index],
             date: date_array[selected_date_index],
             ticket_image: poster_image,
@@ -158,10 +158,10 @@ const SeatBookingScreen = ({navigation, route}: any) => {
         );
       }
       navigation.navigate('Ticket', {
-        seatArray: selected_seat_array,
+        seat_array: selected_seat_array,
         time: time_array[selected_time_index],
         date: date_array[selected_date_index],
-        ticketImage: route.params.PosterImage,
+        ticket_image: poster_image,
       });
     } else {
       Toast.showWithGravity(

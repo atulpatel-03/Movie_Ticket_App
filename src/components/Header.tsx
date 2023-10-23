@@ -31,6 +31,12 @@ const styles = StyleSheet.create({
   },
   header_text: {
     color: COLORS.White,
+    alignSelf: 'center',
+    fontSize: FONTSIZE.size_20,
+    fontWeight: '500',
+  },
+  empty_container: {
+    marginLeft: 20,
   },
 });
 
@@ -55,6 +61,7 @@ const Header = ({goback_functionality, icon_name, header_name}: Props) => {
         />
       </TouchableOpacity>
       <Text style={styles.header_text}>{header_name}</Text>
+      <View style={styles.empty_container} />
     </View>
   );
 };
