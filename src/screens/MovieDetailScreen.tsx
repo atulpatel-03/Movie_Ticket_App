@@ -272,7 +272,7 @@ const MovieDetailScreen = ({navigation, route}: any) => {
   return (
     <View style={styles.container}>
       <StatusBar hidden />
-      <ScrollView>
+      <ScrollView bounces={false} showsHorizontalScrollIndicator={false}>
         <ImageBackground
           source={{uri: base_image_path('w780', movie_details?.backdrop_path)}}
           style={styles.background_img}>
