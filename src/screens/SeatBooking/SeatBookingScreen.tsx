@@ -58,12 +58,12 @@ const generate_seats = () => {
   for (let i = 0; i < num_row; i++) {
     let column_array = [];
     for (let j = 0; j < num_column; j++) {
-      let seatObject = {
+      let seat_object = {
         number: start,
         taken: Boolean(Math.round(Math.random())),
         selected: false,
       };
-      column_array.push(seatObject);
+      column_array.push(seat_object);
       start++;
     }
 
