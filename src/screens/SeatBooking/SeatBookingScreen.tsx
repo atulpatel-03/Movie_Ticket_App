@@ -127,12 +127,12 @@ const SeatBookingScreen = ({navigation, route}: any) => {
     }
   };
 
-  const handle_selected_date = (date: any) => {
-    set_selected_date_index(date);
+  const handle_selected_date = (date_index: number) => {
+    set_selected_date_index(date_index);
   };
 
-  const handle_selected_time = (time: string) => {
-    set_selected_time_index(time);
+  const handle_selected_time = (time_index: string) => {
+    set_selected_time_index(time_index);
   };
 
   const handle_seat_book = async () => {
@@ -240,9 +240,9 @@ const SeatBookingScreen = ({navigation, route}: any) => {
             <TouchableOpacity
               style={[
                 styles.show_dates,
-                selected_date_index === item && styles.selected_date,
+                selected_date_index === index && styles.selected_date,
               ]}
-              onPress={() => handle_selected_date(item)}>
+              onPress={() => handle_selected_date(index)}>
               <Text style={styles.date_text}>{item.date}</Text>
               <Text style={styles.day_text}>{item.day}</Text>
             </TouchableOpacity>
@@ -258,9 +258,9 @@ const SeatBookingScreen = ({navigation, route}: any) => {
             <TouchableOpacity
               style={[
                 styles.time_box,
-                selected_time_index === item && styles.selected_time,
+                selected_time_index === index && styles.selected_time,
               ]}
-              onPress={() => handle_selected_time(item)}>
+              onPress={() => handle_selected_time(index)}>
               <Text style={styles.time}>{item}</Text>
             </TouchableOpacity>
           );
