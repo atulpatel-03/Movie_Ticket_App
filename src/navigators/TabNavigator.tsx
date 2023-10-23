@@ -8,6 +8,7 @@ import TicketScreen from '../screens/TicketScreen';
 import UserAccountScreen from '../screens/UserAccountScreen';
 import {COLORS, FONTFAMILY, FONTSIZE, SPACING} from '../theme/theme';
 import CustomIcon from '../components/CustomIcon';
+import {TabName} from './Constant';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,7 +25,7 @@ const TabNavigator = () => {
         },
       }}>
       <Tab.Screen
-        name="Home"
+        name={TabName.Home}
         component={HomeScreen}
         options={{
           tabBarShowLabel: false,
@@ -46,7 +47,7 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Search"
+        name={TabName.Search}
         component={SearchScreen}
         options={{
           tabBarShowLabel: false,
@@ -68,7 +69,7 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Ticket"
+        name={TabName.Ticket}
         component={TicketScreen}
         options={{
           tabBarShowLabel: false,
@@ -90,7 +91,7 @@ const TabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="UserAccount"
+        name={TabName.UserAccount}
         component={UserAccountScreen}
         options={{
           tabBarShowLabel: false,

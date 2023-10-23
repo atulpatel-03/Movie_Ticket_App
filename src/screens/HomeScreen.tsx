@@ -21,6 +21,7 @@ import SearchBar from '../components/SearchBar';
 import CategoryHeader from '../components/CategoryHeader';
 import SubMovieCard from '../components/SubMovieCard';
 import MovieCard from '../components/MovieCard';
+import {StackName, TabName} from '../navigators/Constant';
 
 const styles = StyleSheet.create({
   container: {
@@ -84,7 +85,7 @@ const HomeScreen = ({navigation}: any) => {
     useState<any>(undefined);
 
   const search_functionality = (search_text: string) => {
-    navigation.navigate('Search', {
+    navigation.navigate(TabName.Search, {
       search_text: search_text,
     });
   };
@@ -110,7 +111,7 @@ const HomeScreen = ({navigation}: any) => {
   }, []);
 
   const handle_selected_movie = (id: number) => {
-    navigation.push('MovieDetail', {
+    navigation.push(StackName.MovieDetail, {
       movie_id: id,
     });
   };
