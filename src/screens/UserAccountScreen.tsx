@@ -1,5 +1,5 @@
-import * as React from 'react';
 import {Text, View, StyleSheet, Image} from 'react-native';
+
 import {COLORS, FONTSIZE, SPACING} from '../theme/theme';
 import Header from '../components/Header';
 import AccountComp from '../components/AccountComp';
