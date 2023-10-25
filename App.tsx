@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import TabNavigator from './src/navigators/TabNavigator';
-import SeatBookingScreen from './src/screens/SeatBookingScreen';
+import SeatBookingScreen from './src/screens/SeatBooking/SeatBookingScreen';
 import MovieDetailScreen from './src/screens/MovieDetailScreen';
 
 const Stack = createNativeStackNavigator();

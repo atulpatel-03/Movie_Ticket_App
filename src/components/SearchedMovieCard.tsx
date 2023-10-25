@@ -12,16 +12,18 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     backgroundColor: COLORS.Black,
+    marginHorizontal: SPACING.space_10,
   },
   card_title: {
     fontSize: FONTSIZE.size_14,
     color: COLORS.White,
     fontFamily: FONTFAMILY.poppins_medium,
+    textAlign: 'center',
   },
   image_style: {
-    height: 200,
-    width: 125,
-    borderRadius: BORDERRADIUS.radius_20,
+    height: 250,
+    width: 150,
+    borderRadius: BORDERRADIUS.radius_10,
     marginBottom: SPACING.space_12,
   },
 });
@@ -34,7 +36,7 @@ interface Props {
   card_function: any;
 }
 
-const SubMovieCard = ({
+const SearchedMovieCard = ({
   title,
   image_link,
   card_width,
@@ -51,4 +53,4 @@ const SubMovieCard = ({
   );
 };
 
-export default SubMovieCard;
+export default SearchedMovieCard;
