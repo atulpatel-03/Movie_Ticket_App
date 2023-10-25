@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import {
-  ScrollView,
   View,
   StyleSheet,
   StatusBar,
@@ -26,7 +25,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 600,
   },
-
   search_bar_input: {
     marginHorizontal: SPACING.space_36,
     marginTop: SPACING.space_36,
@@ -40,10 +38,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const {width, height} = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
-const SearchScreen = ({navigation, route}: any) => {
-  const [is_loading, set_is_loading] = useState(false);
+const SearchScreen = ({navigation}: any) => {
+  const [is_loading, set_is_loading] = useState<boolean>(false);
   const [searched_movies_list, set_searched_movies_list] =
     useState<any>(undefined);
 
