@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.size_14,
     color: COLORS.White,
     fontFamily: FONTFAMILY.poppins_medium,
-    lineHeight: SPACING.space_20,
   },
   image_style: {
     height: 200,
@@ -30,13 +29,21 @@ const styles = StyleSheet.create({
 interface Props {
   title: string;
   image_link: any;
-  cardWidth: number;
+  card_width: number;
+  movie_id: number;
+  card_function: any;
 }
 
-const SubMovieCard = ({title, image_link, cardWidth}: Props) => {
+const SubMovieCard = ({
+  title,
+  image_link,
+  card_width,
+  movie_id,
+  card_function,
+}: Props) => {
   return (
-    <TouchableOpacity>
-      <View style={[styles.card_container, {maxWidth: cardWidth}]}>
+    <TouchableOpacity onPress={() => card_function(movie_id)}>
+      <View style={[styles.card_container, {maxWidth: card_width}]}>
         <Image style={[styles.image_style]} source={{uri: image_link}} />
         <Text style={styles.card_title}>{title}</Text>
       </View>

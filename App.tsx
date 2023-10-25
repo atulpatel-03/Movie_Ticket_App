@@ -6,6 +6,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabNavigator from './src/navigators/TabNavigator';
 import SeatBookingScreen from './src/screens/SeatBookingScreen';
 import MovieDetailScreen from './src/screens/MovieDetailScreen';
+import {StackName} from './src/navigators/Constant';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,17 +15,17 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen
-          name="Tab"
+          name={StackName.Tab}
           component={TabNavigator}
           options={{animation: 'default'}}
         />
         <Stack.Screen
-          name="MovieDetail"
+          name={StackName.MovieDetail}
           component={MovieDetailScreen}
           options={{animation: 'slide_from_right'}}
         />
         <Stack.Screen
-          name="SeatBooking"
+          name={StackName.SeatBooking}
           component={SeatBookingScreen}
           options={{animation: 'slide_from_bottom'}}
         />
