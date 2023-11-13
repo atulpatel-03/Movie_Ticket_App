@@ -1,4 +1,5 @@
 import {Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+
 import {
   BORDERRADIUS,
   COLORS,
@@ -12,16 +13,18 @@ const styles = StyleSheet.create({
     display: 'flex',
     flex: 1,
     backgroundColor: COLORS.Black,
+    marginHorizontal: SPACING.space_10,
   },
   card_title: {
     fontSize: FONTSIZE.size_14,
     color: COLORS.White,
     fontFamily: FONTFAMILY.poppins_medium,
+    textAlign: 'center',
   },
   image_style: {
-    height: 200,
-    width: 125,
-    borderRadius: BORDERRADIUS.radius_20,
+    height: 250,
+    width: 150,
+    borderRadius: BORDERRADIUS.radius_10,
     marginBottom: SPACING.space_12,
   },
 });
@@ -34,7 +37,7 @@ interface Props {
   card_function: any;
 }
 
-const SubMovieCard = ({
+const SearchedMovieCard = ({
   title,
   image_link,
   card_width,
@@ -44,11 +47,11 @@ const SubMovieCard = ({
   return (
     <TouchableOpacity onPress={() => card_function(movie_id)}>
       <View style={[styles.card_container, {maxWidth: card_width}]}>
-        <Image style={[styles.image_style]} source={{uri: image_link}} />
+        <Image style={styles.image_style} source={{uri: image_link}} />
         <Text style={styles.card_title}>{title}</Text>
       </View>
     </TouchableOpacity>
   );
 };
 
-export default SubMovieCard;
+export default SearchedMovieCard;
