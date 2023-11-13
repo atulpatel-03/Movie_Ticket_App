@@ -1,4 +1,5 @@
 import {Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+
 import {
   BORDERRADIUS,
   COLORS,
@@ -46,7 +47,7 @@ const SearchedMovieCard = ({
   return (
     <TouchableOpacity onPress={() => card_function(movie_id)}>
       <View style={[styles.card_container, {maxWidth: card_width}]}>
-        <Image style={[styles.image_style]} source={{uri: image_link}} />
+        <Image style={styles.image_style} source={{uri: image_link}} />
         <Text style={styles.card_title}>{title}</Text>
       </View>
     </TouchableOpacity>

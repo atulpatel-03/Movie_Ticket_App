@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
 const {width, height} = Dimensions.get('window');
 
 const SearchScreen = ({navigation, route}: any) => {
-  const [is_loading, set_is_loading] = useState(false);
+  const [is_loading, set_is_loading] = useState<boolean>(false);
   const [searched_movies_list, set_searched_movies_list] =
     useState<any>(undefined);
 

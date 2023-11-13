@@ -1,11 +1,6 @@
 import {Text, View, StyleSheet, Image} from 'react-native';
-import {
-  BORDERRADIUS,
-  COLORS,
-  FONTFAMILY,
-  FONTSIZE,
-  SPACING,
-} from '../theme/theme';
+
+import {BORDERRADIUS, COLORS, FONTSIZE} from '../theme/theme';
 
 const styles = StyleSheet.create({
   card_container: {
